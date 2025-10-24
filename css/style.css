@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #F1F8FF !important;
+}
+
+
+/* Global Class */
+@font-face {
+    font-family: merrf;
+    src: url(/fonts/Merriweather-BlackItalic.ttf);
+}
+.text-merrf{
+    font-style: merrf !important;
+}
+@font-face {
+    font-family: dance;
+    src: url(/fonts/DancingScript-Bold.ttf);
+}
+.text-dance{
+    font-family: dance !important;
+}
+@font-face {
+    font-family: calis;
+    src: url(/fonts/Calistoga-Regular.ttf);
+}
+.text-calis{
+    font-family: calis !important;
+}
+.text-darks{
+    color: #0F172B !important;
+}
+.bg-darks{
+    background-color: #0F172B !important;
+}
+.bg-rim{
+    background-color: #FEA116 !important;
+}
+.text-rim{
+    color: #FEA116 !important;
+}
+.border-rim{
+    border-color: #FEA116 !important;
+}
+.bg-white{
+    background-color: #FFFFFF !important;
+}
+.fs-18{
+    font-size: 17px;
+}
+.fs-17{
+    font-size: 17px !important;
+}
+.fs-16{
+    font-size: 16px !important;
+}
+.flex-1{
+    flex: 1 !important;
+}
+.list-style-none{
+    list-style: none !important;
+}
+.td-none{
+    text-decoration: none !important;
+}
+.td-none:hover{
+    letter-spacing: 2px !important;
+    transition: .4s ease;
+}
+
+/* naVbar */
+.navbarbtn{
+    text-transform: uppercase;
+    font-size: 19px;
+    font-weight: 700;
+    color: white !important;
+}.navbarbtn:hover{
+    color: #FEA116 !important;
+}
+.actives{
+    color: #FEA116 !important;
+}
+
+/* background-images */
+.background-images{
+    background-image: url(/images/1st/bg-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backface-visibility: visible;
+    background-position: center, center;
+    
+    position: relative;
+    z-index: 1;
+}.background-images::after{
+    content: '';
+    background-color:#0f172be5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* pizza */
+.pizzas{
+    animation: pizza 19s linear infinite !important;
+}
+@keyframes pizza {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* cards */
+.cards:hover{
+    background-color: #FEA116;
+    transition: .5s ease;
+    color: white !important;
+    h5{
+        color: white !important;
+    }
+    iconify-icon{
+        color: white !important;
+    }
+}
+
+/* About */
+.border-left{
+    border-left: 5px solid  #FEA116;
+}
+
+/* foodmenubtn */
+.foodmenubtn {
+    transition: .1s ease;
+    overflow-x: hidden;
+    position: relative;
+}
+.foodmenubtn::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid  #FEA116 !important;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .5s ease;
+    transform: translateX(-100%);
+}
+.foodmenubtn:hover::after{
+    transform: translateX(0);
+}
+
+/* contact */
+.img-contant{
+    position: relative;
+}
+.play-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    width: 100px;
+    height: 100px;
+     display:  flex !important;
+     align-items: center !important;
+     justify-content: center !important;
+    z-index: 2;
+}
+.play-btn::after{
+    content: '';
+    background-color: #fea1169f !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    z-index: -1;
+    animation: payanimation 1s ease infinite !important;
+}
+@keyframes payanimation{
+    0%{
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 1;
+    }
+}
+.play-btn::before{
+    content: '';
+    background-color: #fea11680 !important;
+    width: 120% !important;
+    height: 120% !important;
+    border-radius: 50% !important;
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    z-index: -2;
+    animation: payanimation 1s ease .4s infinite;
+}
+
+/* Team */
+.team-card{
+    height: 323px;
+    overflow: hidden;
+    transition: .5s ease;
+}
+.team-img{
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+}
+.team-card:hover{
+    height: 368px;
+    transition: .5s ease;
+}
+
+/* Testimonil */
+.testimonial-images{
+    height: 55px;
+    width: 55px;
+    border: 3px solid  #FEA116 ;
+    box-shadow: 0 0 5px 4px  #fea116e7 ;
+}
+.slick-slide{
+    height: auto!important;
+}
